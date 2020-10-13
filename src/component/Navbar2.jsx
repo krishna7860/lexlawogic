@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../assests/logo.png';
+import{Link} from 'react-router-dom'
 
 export default class Navbar2 extends Component {
   render() {
@@ -8,13 +9,13 @@ export default class Navbar2 extends Component {
         <nav class='navbar navbar-expand-lg navbar-light bg-light '>
           <div className='d-flex justify-content-around w-100'>
             <div>
-              <a class='navbar-brand' href='#'>
+              <Link class='navbar-brand' to='#'>
                 <img
                   src={logo}
                   alt=''
-                  style={{ height: '80px', width: '280px' }}
+                  style={{ height: '75px', width: '300px' }}
                 />
-              </a>
+              </Link>
             </div>
             <div className='my-3'>
               <div
@@ -23,9 +24,9 @@ export default class Navbar2 extends Component {
               >
                 <ul class='navbar-nav mr-auto mx-4 px-5'>
                   <li class='nav-item active'>
-                    <a class='nav-link' href='#'>
+                    <Link class='nav-link' to='/'>
                       Home <span class='sr-only'>(current)</span>
-                    </a>
+                    </Link>
                   </li>
 
                   <li class='nav-item dropdown'>
@@ -54,9 +55,9 @@ export default class Navbar2 extends Component {
                     </div>
                   </li>
                   <li class='nav-item active'>
-                    <a class='nav-link' href='#'>
+                    <Link class='nav-link' to='/about'>
                       About <span class='sr-only'>(current)</span>
-                    </a>
+                    </Link>
                   </li>
                   <li class='nav-item active'>
                     <a class='nav-link' href='#'>

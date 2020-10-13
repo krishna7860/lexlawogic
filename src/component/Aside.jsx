@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Aside extends Component {
   render() {
     return (
-      <div className='m-2'>
+      <div className='m-2 container'>
         <div className='mx-2 my-5' style={{ width: '300px' }}>
           <button className='btn btn-dark py-3 px-5 my-3'>About Me</button>
           <div style={{ background: 'grey', height: '231px' }}></div>

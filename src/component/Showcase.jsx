@@ -4,7 +4,7 @@ export class Showcase extends Component {
   render() {
     return (
       <div>
-        <div className='mx-4 my-5 d-flex'>
+        <div className='mx-4 my-5 d-flex container'>
           <div className='m-4' style={{ width: '293px' }}>
             <div style={{ background: 'grey', height: '241px' }}></div>
             <p>BRANDING, DESIGN AUGUST 8, 2016</p>

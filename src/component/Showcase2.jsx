@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Showcase2 extends Component {
   render() {
     return (
-      <div className='mx-4 my-5 d-flex'>
+      <div className='mx-4 my-5 d-flex container'>
         <div className='m-4' style={{ width: '262px' }}>
           <div style={{ background: 'grey', height: '267px' }}></div>
           <h5 className='my-3'>
