@@ -4,7 +4,7 @@ export class Aside extends Component {
   render() {
     return (
       <div className='m-2'>
-        <div className='m-5' style={{ width: '300px' }}>
+        <div className='mx-2 my-5' style={{ width: '300px' }}>
           <button className='btn btn-dark py-3 px-5 my-3'>About Me</button>
           <div style={{ background: 'grey', height: '231px' }}></div>
 
@@ -14,7 +14,7 @@ export class Aside extends Component {
             Italic Mountains.
           </p>
         </div>
-        <div className='m-5' style={{ width: '300px' }}>
+        <div className='mx-2 my-5' style={{ width: '300px' }}>
           <button className='btn btn-dark py-3 px-5 my-3'>Social</button>
           <div>
             <i class='fab fa-facebook-f  btn-dark mx-1 my-4 p-3'></i>
@@ -32,7 +32,7 @@ export class Aside extends Component {
             Italic Mountains.
           </p>
         </div>
-        <div className='m-5' style={{ width: '300px' }}>
+        <div className='mx-2 my-5' style={{ width: '300px' }}>
           <button className='btn btn-dark py-3 px-5 my-3'>Events</button>
           <div class='row'>
             <div
@@ -75,7 +75,7 @@ export class Aside extends Component {
             ></div>
           </div>
         </div>
-        <div className='m-5' style={{ width: '300px' }}>
+        <div className='mx-2 my-5' style={{ width: '300px' }}>
           <button className='btn btn-dark py-3 px-5 my-3'>Latest Post</button>
           <div className='d-flex'>
             <div
@@ -108,7 +108,7 @@ export class Aside extends Component {
             </div>
           </div>
         </div>
-        <div className='m-5' style={{ width: '300px' }}>
+        <div className='mx-2 my-5' style={{ width: '300px' }}>
           <button className='btn btn-dark py-3 px-5 my-3'>Categories</button>
           <div className='d-flex flex-column'>
             <a href='#' className='border-bottom my-2 p-1 text-dark'>
@@ -128,7 +128,7 @@ export class Aside extends Component {
             </a>
           </div>
         </div>
-        <div className='m-5' style={{ width: '300px' }}>
+        <div className='mx-2 my-5' style={{ width: '300px' }}>
           <button className='btn btn-dark py-3 px-5 my-3'>Tags</button>
           <div className='d-flex flex-column'>
             <div>
