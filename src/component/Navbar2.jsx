@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import logo from '../assests/logo.png';
 import{Link, Route} from 'react-router-dom'
 import Home from './Home';
@@ -14,111 +14,109 @@ import Internship from './Internship';
 import Contact from './Contact';
 import Readmore from './Readmore';
 import Admin from './Admin';
+import './Navbar.css';
+function Navbar2() {
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-export default class Navbar2 extends Component {
-  render() {
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
+  
     return (
-      <div>
-        <nav class='navbar navbar-expand-lg navbar-light bg-light '>
-          <div className='d-flex align-items-center justify-content-around w-100'>
-            <div>
-              <Link class='navbar-brand' to='/'>
-                <img
+      <>
+        <nav class='navbar'>
+               <img
+                  className='navbar-logo'
                   src={logo}
                   alt=''
-                  style={{ height: '90px', width: '300px' }}
-                />
-              </Link>
-            </div>
-            <div className='my-3'>
-              <div
-                class='collapse navbar-collapse '
-                id='navbarSupportedContent'
-              >
-                <ul class='navbar-nav mr-auto mx-4 px-5'>
-                  <li class='nav-item active'>
-                    <Link class='nav-link' to='/'>
-                      Home <span class='sr-only'>(current)</span>
+                  style={{ height: '70px', width: '200px' }}
+                  onClick={handleClick}
+                  />
+           <div className='menu-icon' onClick={handleClick}>
+              <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </div>
+         
+              <ul class={click?'nav-menu active' :'nav-menu'}>
+                  <li class='nav-item'>
+                    <Link class='nav-links' to='/' onClick={closeMobileMenu}>
+                      Home 
                     </Link>
-                  </li>
+                 </li>
+             
 
-                  <li class='nav-item dropdown'>
+                  <li class='nav-item dropdown' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                     <a
-                      class='nav-link dropdown-toggle'
+                      class='nav-links dropdown-toggle'
                       href='#'
                       id='navbarDropdown'
                       role='button'
                       data-toggle='dropdown'
                       aria-haspopup='true'
                       aria-expanded='false'
-                    >
+                    onClick={closeMobileMenu}>
                       Categories
                     </a>
                     <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
                    
-                    <Link class='dropdown-item' to='/news'>
-                      News <span class='sr-only'>(current)</span>
+                    <Link class='dropdown-item' to='/news' onClick={closeMobileMenu}>
+                      News
                     </Link>
-                    <Link class='dropdown-item' to='/article'>
-                      Article <span class='sr-only'>(current)</span>
+                    <Link class='dropdown-item' to='/article'onClick={closeMobileMenu}>
+                      Article
                     </Link>
-                    <Link class='dropdown-item' to='/blog'>
-                      Blog <span class='sr-only'>(current)</span>
+                    <Link class='dropdown-item' to='/blog'onClick={closeMobileMenu}>
+                      Blog 
                     </Link>
-                    <Link class='dropdown-item' to='/research'>
-                      Research papers <span class='sr-only'>(current)</span>
+                    <Link class='dropdown-item' to='/research'onClick={closeMobileMenu}>
+                      Research papers 
                     </Link>
-                    <Link class='dropdown-item' to='/caprograms'>
-                     CA programs <span class='sr-only'>(current)</span>
+                    <Link class='dropdown-item' to='/caprograms'onClick={closeMobileMenu}>
+                     CA programs 
                     </Link>
-                    <Link class='dropdown-item' to='/caselaw'>
-                     Case law <span class='sr-only'>(current)</span>
+                    <Link class='dropdown-item' to='/caselaw'onClick={closeMobileMenu}>
+                     Case law 
                     </Link>
-                    <Link class='dropdown-item' to='/internship'>
-                     Internship & Events <span class='sr-only'>(current)</span>
+                    <Link class='dropdown-item' to='/internship'onClick={closeMobileMenu}>
+                     Internship & Events 
                     </Link>
                     </div>
                   </li>
-                  <li class='nav-item active'>
-                    <Link class='nav-link' to='/about'>
-                      About <span class='sr-only'>(current)</span>
+                  <li class='nav-item'>
+                    <Link class='nav-links' to='/about'onClick={closeMobileMenu}>
+                      About 
                     </Link>
                   </li>
-                  <li class='nav-item active'>
-                    <Link class='nav-link' to='/team'>
-                      Team <span class='sr-only'>(current)</span>
+                  <li class='nav-item'>
+                    <Link class='nav-links' to='/team'onClick={closeMobileMenu}>
+                      Team 
                     </Link>
                   </li>
-                  <li class='nav-item active'>
-                    <Link class='nav-link' to='/contact'>
-                      Contact <span class='sr-only'>(current)</span>
+                  <li class='nav-item'>
+                    <Link class='nav-links' to='/contact'onClick={closeMobileMenu}>
+                      Contact 
                     </Link>
                   </li>
-                  
-                </ul>
-               
-                <div >
-                    <input type="search" class="form-control" placeholder="Search......" style={{borderRadius:'50px'}} />
-                    
-                  </div>
-                 
-                 
-                  
-                <div className='mx-5' >
-                  <a href="https://www.facebook.com/lexlawogic/" target="_blank"><i class='text-dark fab fa-facebook-f mx-2'></i></a>
-                  <a href="https://twitter.com/lexlawogic" target="_blank"><i class='text-dark fab fa-twitter mx-2'></i></a>
-                  <a href="https://www.linkedin.com/company/lexlawogic" target="_blank"> <i class='text-dark fab fa-linkedin-in mx-2'></i></a>
-                  <a href="https://www.instagram.com/lexlawogic/" target="_blank"> <i class='text-dark fab fa-instagram mx-2'></i></a>
-            
-           
-           
-           
-          </div>
-          <Link to='/admin' className='btn btn-outline-danger my-1 my-sm-0'>Login</Link>
-              </div>
-            </div>
-          </div>
+            {/* <input type="search" class="form-control" placeholder="Search......" style={{ borderRadius: '50px' }} /> */}
+             
+          </ul>
+         
+          
         </nav>
       <Route exact path='/' component={Home}></Route>
       <Route path='/about' component={About}></Route>
@@ -133,7 +131,8 @@ export default class Navbar2 extends Component {
       <Route path='/contact' component={Contact}></Route>
       <Route path='/admin' component={Admin}></Route>
       <Route path='/readmore/:id' component={Readmore}></Route>
-      </div>
+      </>
     );
   }
-}
+
+export default Navbar2;

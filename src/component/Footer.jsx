@@ -4,8 +4,8 @@ export class Footer extends Component {
   render() {
     return (
       <div
-        className='d-flex justify-content-center p-5'
-        style={{ height: '500px', background: 'grey' }}
+        className='col-md-12  md-d-flex justify-content-center p-5 '
+        style={{  background: 'grey' }}
       >
         <div className='m-5'>
           <h5 className='border-bottom border-dark'>ABOUT</h5>
@@ -51,42 +51,42 @@ export class Footer extends Component {
             It is a paradisematic
           </a>
         </div>
-        <div className='d-flex flex-column m-5'>
-          <h5 className='border-bottom border-dark'>PAGES</h5>
-          <a href='#' className='my-1 p-1 text-dark'>
-            HOME
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            ABOUT
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            TEAM
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            BLOG
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            CONTACT
-          </a>
-        </div>
-        <div className='d-flex flex-column m-5'>
-          <h5 className='border-bottom border-dark'>LINKS</h5>
-          <a href='#' className='my-1 p-1 text-dark'>
-            DESIGN
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            BRANDING
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            ART
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            FASION
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            PRINT
-          </a>
-        </div>
+           <div className='d-flex flex-column m-5'>
+                <h5 className='border-bottom border-dark'>PAGES</h5>
+                <a href='#' className='my-1 p-1 text-dark'>
+                  HOME
+                </a>
+                <a href='#' className='my-1 p-1 text-dark'>
+                  ABOUT
+                </a>
+                <a href='#' className='my-1 p-1 text-dark'>
+                  TEAM
+                </a>
+                <a href='#' className='my-1 p-1 text-dark'>
+                  BLOG
+                </a>
+                <a href='#' className='my-1 p-1 text-dark'>
+                  CONTACT
+                </a>
+          </div>
+          <div className='d-flex flex-column m-5'>
+               <h5 className='border-bottom border-dark'>LINKS</h5>
+              <a href='#' className='my-1 p-1 text-dark'>
+                DESIGN
+              </a>
+              <a href='#' className='my-1 p-1 text-dark'>
+                BRANDING
+              </a>
+              <a href='#' className='my-1 p-1 text-dark'>
+                ART
+              </a>
+              <a href='#' className='my-1 p-1 text-dark'>
+                FASION
+              </a>
+              <a href='#' className='my-1 p-1 text-dark'>
+                PRINT
+              </a>
+           </div>
       </div>
     );
   }
