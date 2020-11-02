@@ -45,7 +45,7 @@ function Navbar2() {
                   className='navbar-logo'
                   src={logo}
                   alt=''
-                  style={{ height: '70px', width: '200px' }}
+                  style={{width: '250px' }}
                   onClick={handleClick}
                   />
            <div className='menu-icon' onClick={handleClick}>

@@ -17,9 +17,8 @@ export default class Home extends Component {
                         
 
                     </div>
-                     < div className='col-4' >
+                     < div className='col-4 text-primary d-none d-md-block '  >
                         <Aside />
-
                     </div>
                     </div>
                    
