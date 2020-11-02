@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 export class Navbar extends Component {
   render() {
     return (
-      <div className='d-flex justify-content-around my-2 mb-0 pb-0 container'>
+      <div style={{background:'#ffffff'}}>
+      <div className='d-flex justify-content-around py-2 mb-0 pb-0 container'>
         <p>Welcome to Law-Website</p>
         <div className='d-flex justify-content-between '>
           <div class='d-flex mx-4'>
@@ -29,6 +30,7 @@ export class Navbar extends Component {
           </div>
         </div>
        
+      </div>
       </div>
     );
   }

@@ -10,7 +10,7 @@ export default class Menu extends Component {
       <div>
         <div
           id="carouselExampleControls"
-          class="carousel slide"
+          class="carousel slide container-fluid"
           data-ride="carousel"
         >
           <div class="carousel-inner">

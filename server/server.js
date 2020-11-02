@@ -1,4 +1,5 @@
 const express = require("express");
+const fileupload = require("express-fileupload")
 const morgan = require("morgan");
 const path = require("path");
 const connect = require("./config/db");
@@ -16,12 +17,16 @@ app.use(express.json());
 
 app.use(cors());
 
+app.use(fileupload())
+
+app.use(express.static(path.join(__dirname, 'public')))
+
 // Routes setup
 const postRouter = require("./routes/post");
-const authorRouter = require("./routes/author");
+
 
 app.use("/api/v1/posts", postRouter);
-app.use("/api/v1/author", authorRouter);
+
 
 process.env.NODE_ENV === "development" ? app.use(morgan("dev")) : null;
 

@@ -1,0 +1,12 @@
+[1019/112402.874:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1024/201649.244:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1024/212308.908:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1025/125800.480:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1026/113050.588:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1026/113050.588:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1026/113050.896:ERROR:exception_snapshot_win.cc(99)] thread ID 1972 not found in process
+[1026/113050.896:ERROR:exception_snapshot_win.cc(99)] thread ID 4416 not found in process
+[1029/172238.779:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1030/105706.855:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1030/132956.021:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1030/133019.633:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0

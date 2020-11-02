@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 export class Showcase2 extends Component {
   render() {
@@ -12,7 +13,9 @@ export class Showcase2 extends Component {
           </h5>
           <p>BRANDING, DESIGN AUGUST 8, 2016</p>
 
-          <button className='btn btn-dark'>Read More</button>
+         <Link  className='btn btn-dark' to='/readmore'>
+            Read More
+            </Link>
         </div>
         <div className='m-4' style={{ width: '262px' }}>
           <div style={{ background: 'grey', height: '267px' }}></div>
@@ -22,7 +25,9 @@ export class Showcase2 extends Component {
           </h5>
           <p>BRANDING, DESIGN AUGUST 8, 2016</p>
 
-          <button className='btn btn-dark'>Read More</button>
+         <Link  className='btn btn-dark' to='/readmore'>
+            Read More
+            </Link>
         </div>
         <div className='m-4' style={{ width: '262px' }}>
           <div style={{ background: 'grey', height: '267px' }}></div>
@@ -32,7 +37,9 @@ export class Showcase2 extends Component {
           </h5>
           <p>BRANDING, DESIGN AUGUST 8, 2016</p>
 
-          <button className='btn btn-dark'>Read More</button>
+         <Link  className='btn btn-dark' to='/readmore'>
+            Read More
+            </Link>
         </div>
         <div className='m-4' style={{ width: '262px' }}>
           <div style={{ background: 'grey', height: '267px' }}></div>
@@ -42,7 +49,9 @@ export class Showcase2 extends Component {
           </h5>
           <p>BRANDING, DESIGN AUGUST 8, 2016</p>
 
-          <button className='btn btn-dark'>Read More</button>
+         <Link  className='btn btn-dark' to='/readmore'>
+            Read More
+            </Link>
         </div>
         <div className='m-4' style={{ width: '262px' }}>
           <div style={{ background: 'grey', height: '267px' }}></div>
@@ -52,7 +61,9 @@ export class Showcase2 extends Component {
           </h5>
           <p>BRANDING, DESIGN AUGUST 8, 2016</p>
 
-          <button className='btn btn-dark'>Read More</button>
+         <Link  className='btn btn-dark' to='/readmore'>
+            Read More
+            </Link>
         </div>
       </div>
     );

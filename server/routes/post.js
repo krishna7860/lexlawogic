@@ -5,12 +5,15 @@ const {
   addPost,
   updatePost,
   deletePost,
+  uploadPhoto,
 } = require("../controller/post");
 
 const router = express.Router({ mergeParams: true });
 
-router.route("/:authorId").get(getPosts).post(addPost);
+router.route("/").get(getPosts).post(addPost);
 
 router.route("/:id").get(getPost).put(updatePost).delete(deletePost);
+
+router.route("/:id/photo").put(uploadPhoto)
 
 module.exports = router;

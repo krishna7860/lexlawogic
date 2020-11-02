@@ -1,141 +1,58 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import axios from 'axios'
+
 
 export class Showcase extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      items:[],
+      isLoading: false,
+      cardClasses : ['col-4','col-8','col-4','col-4','col-4','col-4','col-4','col-4','col-4','col-4','col-4',]
+    }
+
+  }
+
+ 
+  componentDidMount() {
+    axios.get("http://localhost:5000/api/v1/posts/")
+      .then(res => {
+      this.setState({
+        items:res.data.data,
+        isLoading: false,
+      })
+    })
+    .catch(err => console.log(err))   
+  }
   render() {
+    const {items,isLoading, cardClasses}=this.state;
     return (
-      <div>
-        <div className='mx-4 my-5 d-flex container'>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '241px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
+        <div className='my-5'>
+          <div className='row'>
+            {!isLoading?(
+            items.map((item,i) => {
+              if(i<11){
+                
+                return(
+                      <div key={item._id} className={`my-4 ${cardClasses[i]}`} >
+                       <img src={item.banner}  height='300px' width='100%' alt=""/>
+                       <p>{item.createdAt.split('T')[0]}
+                       <span class="badge badge-primary m-1">{item.tags}</span></p>
+                       <h3>{item.title}</h3>
+                       <p>{item.description.length <= 100 ? item.description : (item.description.slice(0,100) + ' .....')}</p>
+                       <Link  className='btn btn-dark' to={`/readmore/${item._id}`} >
+                         Read More
+                       </Link>
+                     </div> 
+                )
+              }
+            })
+         ):(" ")}
+         </div>
+          <div className='text-center'>
+            <button className='btn btn-dark m-5 py-3 px-5'> Load More</button>
           </div>
-          <div className='m-4' style={{ width: '676px' }}>
-            <div style={{ background: 'grey', height: '289px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-        </div>
-        <div className='mx-4 d-flex'>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '351px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '290px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '351px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-        </div>
-        <div className='mx-4 d-flex'>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '386px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '241px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '250px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-        </div>
-        <div className='mx-4 d-flex'>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '290px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '386px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-          <div className='m-4' style={{ width: '293px' }}>
-            <div style={{ background: 'grey', height: '351px' }}></div>
-            <p>BRANDING, DESIGN AUGUST 8, 2016</p>
-            <h3>Far far away, behind the word mountains</h3>
-            <p>
-              She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains.
-            </p>
-            <button className='btn btn-dark'>Read More</button>
-          </div>
-        </div>
-        <div className='text-center'>
-          <button className='btn btn-dark m-5 py-3 px-5'> Load More</button>
-        </div>
       </div>
     );
   }
