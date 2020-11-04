@@ -14,15 +14,11 @@ export default class Home extends Component {
                     <div className='row'>
                     < div className='col-8' >
                         <Showcase />
-                        
-
                     </div>
                      < div className='col-4 text-primary d-none d-md-block '  >
                         <Aside />
                     </div>
                     </div>
-                   
-  
                  </div>
                 <Showcase2 />
             </div>

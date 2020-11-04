@@ -1,95 +1,67 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import './Footer.css';
 
 export class Footer extends Component {
   render() {
     return (
-      <div
-        className='col-md-12  md-d-flex justify-content-center p-5 '
-        style={{  background: 'grey' }}
-      >
-        <div className='m-5'>
-          <h5 className='border-bottom border-dark'>ABOUT</h5>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.Separated they live in Bookmarksgrove right at the
-            coast of the Semantics, a large language ocean.
-          </p>
-        </div>
-        <div className='m-5'>
-          <h5 className='border-bottom border-dark'>NEWSLETTER</h5>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
-          </p>
-          <span className='my-3'>
-            <input value='Email' label='Email' />
-            <button className='btn btn-dark m-5' type='submit'>
-              Submit
-            </button>
-          </span>
-        </div>
-        <div className='d-flex flex-column m-5'>
-          <h5 className='border-bottom border-dark'>LINKS</h5>
-          <a href='#' className='my-1 p-1 text-dark'>
-            Far far away
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            Right at the coast
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            Vokalia and Consonantia
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            A small river
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            Separated they live
-          </a>
-          <a href='#' className='my-1 p-1 text-dark'>
-            It is a paradisematic
-          </a>
-        </div>
-           <div className='d-flex flex-column m-5'>
-                <h5 className='border-bottom border-dark'>PAGES</h5>
-                <a href='#' className='my-1 p-1 text-dark'>
-                  HOME
-                </a>
-                <a href='#' className='my-1 p-1 text-dark'>
-                  ABOUT
-                </a>
-                <a href='#' className='my-1 p-1 text-dark'>
-                  TEAM
-                </a>
-                <a href='#' className='my-1 p-1 text-dark'>
-                  BLOG
-                </a>
-                <a href='#' className='my-1 p-1 text-dark'>
-                  CONTACT
-                </a>
+      <>
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+              </div>
+
+              <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                  <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                  <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                  <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                  <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                  <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                  <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                </ul>
+              </div>
+
+              <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                  <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                  <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                  <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                  <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr />
           </div>
-          <div className='d-flex flex-column m-5'>
-               <h5 className='border-bottom border-dark'>LINKS</h5>
-              <a href='#' className='my-1 p-1 text-dark'>
-                DESIGN
-              </a>
-              <a href='#' className='my-1 p-1 text-dark'>
-                BRANDING
-              </a>
-              <a href='#' className='my-1 p-1 text-dark'>
-                ART
-              </a>
-              <a href='#' className='my-1 p-1 text-dark'>
-                FASION
-              </a>
-              <a href='#' className='my-1 p-1 text-dark'>
-                PRINT
-              </a>
-           </div>
-      </div>
-    );
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+            <a href="#">Scanfcode</a>.
+                </p>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+                </ul>
+              </div>
+            </div>
+          </div>
+    </footer>
+    </>
+    )
   }
 }
 
-export default Footer;
+export default Footer
+

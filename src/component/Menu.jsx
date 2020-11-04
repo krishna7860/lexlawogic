@@ -19,7 +19,7 @@ export default class Menu extends Component {
                 src={img1}
                 class="d-block w-100"
                 alt="..."
-                style={{ height: '85vh' }}
+                style={{ height: '35vh' }}
               />
             </div>
             <div class="carousel-item">
@@ -27,7 +27,7 @@ export default class Menu extends Component {
                src={img2}
                 class="d-block w-100"
                 alt="..."
-                style={{ height: '85vh' }}
+                style={{ height: '35vh' }}
               />
             </div>
             <div class="carousel-item">
@@ -35,7 +35,7 @@ export default class Menu extends Component {
                src={img3}
                 class="d-block w-100"
                 alt="..."
-                style={{ height: '85vh' }}
+                style={{ height: '35vh' }}
               />
             </div>
             <div class="carousel-item">
@@ -43,7 +43,7 @@ export default class Menu extends Component {
                src={img4}
                 class="d-block w-100"
                 alt="..."
-                style={{ height: '85vh' }}
+                style={{ height: '35vh' }}
               />
             </div>
           </div>
