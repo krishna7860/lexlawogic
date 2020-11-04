@@ -9,8 +9,10 @@ function App() {
   return (
       < BrowserRouter>
       
+      <div className="container-fluid">
       <Navbar2/>
       <Footer/>
+      </div>
       </BrowserRouter>
   );
 }
